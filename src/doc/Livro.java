@@ -1,13 +1,12 @@
 package doc;
 
 public abstract class Livro {
-
+    
     private String titulo;
     private String autor;
     private String isbn;
     private boolean disponivel;
 
-    // Construtor do Livro
     public Livro(String titulo, String autor, String isbn) {
         this.titulo = titulo;
         this.autor = autor;
@@ -15,35 +14,16 @@ public abstract class Livro {
         this.disponivel = true;
     }
 
-    // Metodo para livro emprestado com sucesso
-    public boolean emprestar() {
-        if (disponivel) {
-            disponivel = false;
-            return true;
-        }
-        System.out.println("Não há exemplar disponível para empréstimo.");
-        return false;
-        // Se o livro não está disponível para empréstimo terá esse retorno
-    }
-
-    public void devolver() {
-        disponivel = true; // Quando o livro é devolvido, fica disponível novamente
-    }
-
-    // Métodos abstratos que devem ser implementados nas subclasses
     public abstract String getTipo();
 
-    // Getters e setters (métodos de acesso) para os campos privados
     public String getTitulo() {
         return titulo;
     }
-    
-    // Método que altera o dado informacional, quando for chamado *--*
+
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-    
-    // Método que pega "retorna" o dado informacional, quando for chamado
+
     public String getAutor() {
         return autor;
     }
@@ -60,7 +40,7 @@ public abstract class Livro {
         this.isbn = isbn;
     }
 
-    public boolean obraDisponivel() {
+    public boolean isDisponivel() {
         return disponivel;
     }
 
@@ -68,5 +48,6 @@ public abstract class Livro {
         this.disponivel = disponivel;
     }
 
-
+    // Getters e Setters para os atributos privados
+    // ...
 }

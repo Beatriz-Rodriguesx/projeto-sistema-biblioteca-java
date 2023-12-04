@@ -1,7 +1,10 @@
+package gui;
 
 // import doc.Livro; **Importar se tiver necessidade**
 import doc.LivroDigital;
 import doc.LivroFisico;
+import org.Biblioteca;
+import org.MembroBiblioteca;
 
 public class App {
     public static void main(String[] args) {
@@ -21,22 +24,22 @@ public class App {
         System.out.println("ISBN: " + livroFisico1.getIsbn());
         System.out.println("Localização: " + livroFisico1.getLocalizacao());
         System.out.println("Tipo: " + livroFisico1.getTipo());
-        livroFisico1.emprestar();
+        /*livroFisico1.emprestar();
         System.out.println("Após empréstimo, disponível? " + livroFisico1.obraDisponivel());
         livroFisico1.devolver();
         System.out.println("Após devolução, disponível? " + livroFisico1.obraDisponivel());
-        System.out.println();
+        System.out.println();*/
 
         System.out.println("\n**002**Título: " + livroFisico2.getTitulo());
         System.out.println("Autor: " + livroFisico2.getAutor());
         System.out.println("ISBN: " + livroFisico2.getIsbn());
         System.out.println("Localização: " + livroFisico2.getLocalizacao());
         System.out.println("Tipo: " + livroFisico2.getTipo());
-        livroFisico2.emprestar();
+        /*livroFisico2.emprestar();
         System.out.println("Após empréstimo, disponível? " + livroFisico2.obraDisponivel());
         livroFisico2.devolver();
         System.out.println("Após devolução, disponível? " + livroFisico2.obraDisponivel());
-        System.out.println();
+        System.out.println();*/
 
         System.out.println("\nLivro do Acervo de Romance da Biblioteca **A**:\n");
 
@@ -45,11 +48,11 @@ public class App {
         System.out.println("ISBN: " + livroFisico3.getIsbn());
         System.out.println("Localização: " + livroFisico3.getLocalizacao());
         System.out.println("Tipo: " + livroFisico3.getTipo());
-        livroFisico3.emprestar();
+        /*livroFisico3.emprestar();
         System.out.println("Após empréstimo, disponível? " + livroFisico3.obraDisponivel());
         livroFisico3.devolver();
         System.out.println("Após devolução, disponível? " + livroFisico3.obraDisponivel());
-        System.out.println();
+        System.out.println();*/
 
         // **Aqui foi chamado o costrutor para inicializar o objeto LivroDigital**
         LivroDigital livroDigital1 = new LivroDigital("Introdução à Inteligência Artificial", "Seu Autor", "9781234567890", "PDF");
@@ -61,9 +64,9 @@ public class App {
         System.out.println("ISBN: " + livroDigital1.getIsbn());
         System.out.println("Formato: " + livroDigital1.getFormato());
         System.out.println("Tipo: " + livroDigital1.getTipo());
-        livroDigital1.emprestar();
+        /*livroDigital1.emprestar();
         System.out.println("Após empréstimo, disponível? " + livroDigital1.obraDisponivel());
         livroDigital1.devolver();
-        System.out.println("Após devolução, disponível? " + livroDigital1.obraDisponivel());
+        System.out.println("Após devolução, disponível? " + livroDigital1.obraDisponivel());*/
     }
 }

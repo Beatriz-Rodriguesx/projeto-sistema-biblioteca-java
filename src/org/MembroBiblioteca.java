@@ -1,7 +1,9 @@
-package gui;
+package org;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import gui.EmprestimoLivro;
 
 public class MembroBiblioteca implements EmprestimoLivro {
 
