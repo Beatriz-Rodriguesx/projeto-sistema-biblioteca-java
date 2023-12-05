@@ -1,6 +1,7 @@
 package doc;
 
 public class LivroDigital extends Livro {
+
     private String formato;
 
     public LivroDigital(String titulo, String autor, String isbn, String formato) {
@@ -18,6 +19,6 @@ public class LivroDigital extends Livro {
 
     @Override
     public String getTipo() {
-        return "Livro Digital";
+        return "Digital";
     }
 }

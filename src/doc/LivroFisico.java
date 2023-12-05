@@ -1,6 +1,7 @@
 package doc;
 
 public class LivroFisico extends Livro {
+
     private String localizacao;
 
     public LivroFisico(String titulo, String autor, String isbn, String localizacao) {
@@ -15,9 +16,9 @@ public class LivroFisico extends Livro {
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
     }
-    
-@Override
+
+    @Override
     public String getTipo() {
-        return "Livro Físico";
+        return "Físico";
     }
 }
