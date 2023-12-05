@@ -1,7 +1,7 @@
 package doc;
 
 public abstract class Livro {
-    
+
     private String titulo;
     private String autor;
     private String isbn;
@@ -47,7 +47,4 @@ public abstract class Livro {
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
     }
-
-    // Getters e Setters para os atributos privados
-    // ...
 }

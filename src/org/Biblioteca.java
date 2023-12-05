@@ -1,15 +1,17 @@
 package org;
 
-import doc.Livro;
-import gui.EmprestimoLivro;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-public class Biblioteca implements EmprestimoLivro {
+import doc.Livro;
+import gui.Emprestimo_Devolucao;
+
+public class Biblioteca implements Emprestimo_Devolucao {
 
     private List<Livro> livros;
     private List<MembroBiblioteca> membros;
-    private List<EmprestimoLivro> emprestimos;
+    private List<Emprestimo_Devolucao> emprestimos;
 
     public Biblioteca() {
         this.livros = new ArrayList<>();
@@ -18,44 +20,40 @@ public class Biblioteca implements EmprestimoLivro {
     }
 
     public void adicionarLivro(Livro livro) {
-        // Lógica para adicionar livro à biblioteca
         this.livros.add(livro);
     }
 
     public void removerLivro(Livro livro) {
-        // Lógica para remover livro da biblioteca
         this.livros.remove(livro);
     }
 
     public void cadastrarMembro(MembroBiblioteca membro) {
-        // Lógica para cadastrar membro na biblioteca
         this.membros.add(membro);
     }
 
     @Override
     public boolean fazerEmprestimo(MembroBiblioteca membro, Livro livro, Date dataEmprestimo, Date dataDevolucao) {
-        // Lógica para fazer empréstimo na biblioteca
-        if (membro.fazerEmprestimo(livro)) {
-            // Adiciona o empréstimo à lista de empréstimos da biblioteca
-            // Usar a dataEmprestimo e dataDevolucao
-            this.emprestimos.add(this);
-            return true;
-        } else {
-            return false;
+        if (!livro.isDisponivel()) {
+            return false; // Livro indisponível para empréstimo
         }
+
+        if (membro.fazerEmprestimo(livro)) {
+            livro.setDisponivel(false);
+            emprestimos.add(this);
+            return true;
+        }
+
+        return false;
     }
 
     @Override
     public boolean fazerDevolucao(MembroBiblioteca membro, Livro livro) {
-        // Lógica para fazer devolução na biblioteca
         if (membro.fazerDevolucao(livro)) {
-            // Remove o empréstimo da lista de empréstimos da biblioteca
-            this.emprestimos.remove(this);
+            livro.setDisponivel(true);
+            emprestimos.remove(this);
             return true;
-        } else {
-            return false;
         }
-    }
 
-    // Getters e Setters aqui né Yas?
+        return false;
+    }
 }
