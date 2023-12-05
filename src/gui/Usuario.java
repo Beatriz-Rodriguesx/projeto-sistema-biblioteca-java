@@ -22,4 +22,20 @@ public class Usuario {
     public boolean fazerDevolucao(Livro livro) {
         return biblioteca.fazerDevolucao(membro, livro);
     }
+
+    public Biblioteca getBiblioteca() {
+        return biblioteca;
+    }
+
+    public void setBiblioteca(Biblioteca biblioteca) {
+        this.biblioteca = biblioteca;
+    }
+
+    public MembroBiblioteca getMembro() {
+        return membro;
+    }
+
+    public void setMembro(MembroBiblioteca membro) {
+        this.membro = membro;
+    }
 }

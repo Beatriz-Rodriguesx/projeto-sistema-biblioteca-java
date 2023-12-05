@@ -29,5 +29,46 @@ public class App {
 
         biblioteca.fazerDevolucao(membro1, livro1);
         biblioteca.fazerDevolucao(membro2, livro2);
+
+         // Criando usuários
+         Usuario usuario1 = new Usuario(biblioteca, membro1);
+         Usuario usuario2 = new Usuario(biblioteca, membro2);
+
+        // Monstrando os livros e membros cadastrados
+         System.out.println("Membro cadastrado: " + membro1.getNome() + " (ID: " + membro1.getId() + ")");
+         System.out.println("Membro cadastrado: " + membro2.getNome() + " (ID: " + membro2.getId() + ")");
+         
+         System.out.println("Livro adicionado: " + livro1.getTitulo() + " (ID: " + livro1.getCodigoISBN() + ")");
+         System.out.println("Livro adicionado: " + livro2.getTitulo() + " (ID: " + livro2.getCodigoISBN() + ")");
+    
+          // Fazendo empréstimos
+        if (usuario1.fazerEmprestimo(livro1, dataEmprestimo, dataDevolucao)) {
+            System.out.println("Empréstimo de " + livro1.getTitulo() + " para " + membro1.getNome() +
+                    " realizado com sucesso em " + dataEmprestimo + " com devolução até " + dataDevolucao + ".");
+        } else {
+            System.out.println("Falha ao realizar o empréstimo de " + livro1.getTitulo() + " para " + membro1.getNome() + ".");
+        }
+
+        if (usuario2.fazerEmprestimo(livro2, dataEmprestimo, dataDevolucao)) {
+            System.out.println("Empréstimo de " + livro2.getTitulo() + " para " + membro2.getNome() +
+                    " realizado com sucesso em " + dataEmprestimo + " com devolução até " + dataDevolucao + ".");
+        } else {
+            System.out.println("Falha ao realizar o empréstimo de " + livro2.getTitulo() + " para " + membro2.getNome() + ".");
+        }
+
+        // Fazendo devoluções
+        if (usuario1.fazerDevolucao(livro1)) {
+            System.out.println("Devolução de " + livro1.getTitulo() + " feita por " + membro1.getNome() +
+                    " realizada com sucesso em " + new Date() + ".");
+        } else {
+            System.out.println("Falha ao realizar a devolução de " + livro1.getTitulo() + " feita por " + membro1.getNome() + ".");
+        }
+
+        if (usuario2.fazerDevolucao(livro2)) {
+            System.out.println("Devolução de " + livro2.getTitulo() + " feita por " + membro2.getNome() +
+                    " realizada com sucesso em " + new Date() + ".");
+        } else {
+            System.out.println("Falha ao realizar a devolução de " + livro2.getTitulo() + " feita por " + membro2.getNome() + ".");
+        }
     }
 }
