@@ -21,6 +21,8 @@ public class App {
         biblioteca.adicionarLivro(livro2);
         biblioteca.cadastrarMembro(membro1);
         biblioteca.cadastrarMembro(membro2);
+        biblioteca.removerLivro(livro1);
+        biblioteca.removerLivro(livro2);
 
         Date dataEmprestimo = new Date();
         Date dataDevolucao = new Date(dataEmprestimo.getTime() + 7 * 24 * 60 * 60 * 1000);
@@ -40,6 +42,12 @@ public class App {
          
          System.out.println("Livro adicionado: " + livro1.getTitulo() + " (ID: " + livro1.getCodigoISBN() + ")");
          System.out.println("Livro adicionado: " + livro2.getTitulo() + " (ID: " + livro2.getCodigoISBN() + ")");
+
+        // Remoção de livros cadastrados
+
+        System.out.println("Livro removido: " + livro1.getTitulo() + " (ID: " + livro1.getCodigoISBN() + ")");
+        System.out.println("Livro removido: " + livro2.getTitulo() + " (ID: " + livro2.getCodigoISBN() + ")");
+
     
           // Fazendo empréstimos
         if (usuario1.fazerEmprestimo(livro1, dataEmprestimo, dataDevolucao)) {
