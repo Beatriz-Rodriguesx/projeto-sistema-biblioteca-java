@@ -3,13 +3,6 @@
 
 Sistema de Biblioteca criado para automação de uma Biblioteca contendo as operações de empréstimo, devolução e atendimento completo ao cliente e/ou usuário da Biblioteca, além do módulo de uso da equipe que gerencia a Unidade de Informação. Este é um projeto de software para Biblioteca em java, simples, desenvolvido para obtenção de nota para segunda avaliação da disciplina de Programação Orientada a Objeto ministrada pelo Prof. Severino José.
 
-
-## Referência
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
-
 ## Autores
 
 - [@joanadarc84](https://github.com/joanadarc84)
@@ -17,10 +10,6 @@ Sistema de Biblioteca criado para automação de uma Biblioteca contendo as oper
 - [@flaviafavacho](https://github.com/flaviafavacho)
 - [@BiaSilvaa](https://github.com/BiaSilvaa)
 - [@YasmimDev](https://github.com/YasmimDev)
-
-
-
-
 
 ## Repositório
 
