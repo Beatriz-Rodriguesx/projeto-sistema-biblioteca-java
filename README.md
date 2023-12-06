@@ -48,5 +48,7 @@ Devolução de livro;
 
 ## Stack utilizada
 
-**Back-end:** Java, VsCode.
+**IDE:** VsCode
+**Linguagem de programação:** Java
+
 
