@@ -18,7 +18,7 @@ public class MembroBiblioteca {
     }
 
     public boolean fazerEmprestimo(Livro livro) {
-        if (livro.isDisponivel()) {
+        if (livro.getDisponivel()) {
             this.emprestimos.add(livro);
             livro.setDisponivel(false);
             return true;

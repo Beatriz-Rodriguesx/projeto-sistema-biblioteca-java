@@ -1,18 +1,37 @@
-package gui;
+package org;
 
 import java.util.Date;
 
 import doc.Livro;
-import org.Biblioteca;
-import org.MembroBiblioteca;
 
 public class Usuario {
     private Biblioteca biblioteca;
     private MembroBiblioteca membro;
-
-    public Usuario(Biblioteca biblioteca, MembroBiblioteca membro) {
+    private String nomeUsuario;
+    private String senha;
+    
+    public Usuario(String nomeUsuario, String senha) {
+        this.nomeUsuario = nomeUsuario;
+        this.senha = senha;
+    }
+    /*public Usuario(Biblioteca biblioteca, MembroBiblioteca membro) {
         this.biblioteca = biblioteca;
         this.membro = membro;
+        
+    }*/
+    public String getNomeUsuario() {
+        return nomeUsuario;
+    }
+    
+    public String getSenha() {
+        return senha;
+    }
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
     }
 
     public boolean fazerEmprestimo(Livro livro, Date dataEmprestimo, Date dataDevolucao) {
@@ -23,7 +42,7 @@ public class Usuario {
         return biblioteca.fazerDevolucao(membro, livro);
     }
 
-    public Biblioteca getBiblioteca() {
+    /*public Biblioteca getBiblioteca() {
         return biblioteca;
     }
 
@@ -37,5 +56,5 @@ public class Usuario {
 
     public void setMembro(MembroBiblioteca membro) {
         this.membro = membro;
-    }
+    }*/
 }

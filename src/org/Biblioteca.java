@@ -33,7 +33,7 @@ public class Biblioteca implements Emprestimo_Devolucao {
 
     @Override
     public boolean fazerEmprestimo(MembroBiblioteca membro, Livro livro, Date dataEmprestimo, Date dataDevolucao) {
-        if (!livro.isDisponivel()) {
+        if (!livro.getDisponivel()) {
             return false; // Livro indisponível para empréstimo
         }
 

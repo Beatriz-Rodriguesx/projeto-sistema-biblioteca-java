@@ -40,7 +40,7 @@ public abstract class Livro {
         this.isbn = isbn;
     }
 
-    public boolean isDisponivel() {
+    public boolean getDisponivel() {
         return disponivel;
     }
 
