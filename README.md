@@ -51,4 +51,8 @@ Devolução de livro;
 **IDE:** VsCode;
 **Linguagem de programação:** Java
 
+## Diagrama UML
+
+![Alt text](<image/UML JAVA.png>)
+
 
