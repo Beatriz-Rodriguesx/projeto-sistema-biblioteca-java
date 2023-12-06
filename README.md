@@ -43,11 +43,7 @@ Cadastro dos usuários da biblioteca, como id;
 - Quanto às operações no atendimento da biblioteca:
 
 Empréstimo de livro;
-Devolução de livro.
-
-Da classe 
-
-
+Devolução de livro da classe; 
 
 
 ## Stack utilizada
