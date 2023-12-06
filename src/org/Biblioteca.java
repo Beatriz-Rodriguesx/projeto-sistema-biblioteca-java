@@ -12,11 +12,32 @@ public class Biblioteca implements Emprestimo_Devolucao {
     private List<Livro> livros;
     private List<MembroBiblioteca> membros;
     private List<Emprestimo_Devolucao> emprestimos;
+    private List<Usuario> usuario;
 
     public Biblioteca() {
         this.livros = new ArrayList<>();
         this.membros = new ArrayList<>();
         this.emprestimos = new ArrayList<>();
+        this.usuario = new ArrayList<>();
+    }
+
+    public List<Livro> getLivrosDisponiveis() {
+        List<Livro> livrosDisponiveis = new ArrayList<>();
+        for (Livro livro : livros) {
+            if (livro.getDisponivel()) {
+                livrosDisponiveis.add(livro);
+            }
+        }
+        return livrosDisponiveis;
+    }
+
+    public Livro livroEscolhido(String titulo) {
+        for (Livro livro : livros) {
+            if (livro.getTitulo().equalsIgnoreCase(titulo)) {
+                return livro;
+            }
+        }
+        return null;
     }
 
     public void adicionarLivro(Livro livro) {
@@ -29,6 +50,10 @@ public class Biblioteca implements Emprestimo_Devolucao {
 
     public void cadastrarMembro(MembroBiblioteca membro) {
         this.membros.add(membro);
+    }
+
+    public void UsuarioBiblioteca(Usuario usuario) {
+        this.usuario.add(usuario);
     }
 
     @Override
@@ -50,7 +75,6 @@ public class Biblioteca implements Emprestimo_Devolucao {
     public boolean fazerDevolucao(MembroBiblioteca membro, Livro livro) {
         if (membro.fazerDevolucao(livro)) {
             livro.setDisponivel(true);
-            emprestimos.remove(this);
             return true;
         }
 
