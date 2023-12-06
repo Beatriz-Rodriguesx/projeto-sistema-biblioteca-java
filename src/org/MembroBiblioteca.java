@@ -21,11 +21,16 @@ public class MembroBiblioteca {
         if (livro.getDisponivel()) {
             this.emprestimos.add(livro);
             livro.setDisponivel(false);
+            System.out.println("Empréstimo realizado com sucesso!");
             return true;
+
         } else {
+            System.out.println("Erro ao efetuar empréstimo!");
             return false;
+            
         }
     }
+
 
     public String getNome() {
         return nome;
@@ -47,8 +52,10 @@ public class MembroBiblioteca {
         if (this.emprestimos.contains(livro)) {
             this.emprestimos.remove(livro);
             livro.setDisponivel(true);
+            System.out.println("Devolução realizada com sucesso!");
             return true;
         } else {
+            System.out.println("Erro ao efetuar devolução!");
             return false;
         }
     }
